@@ -9,7 +9,7 @@ def pascal_triangle(n):
     Pascal triangle function logics
     """
     if n <= 0:
-        return [[]]
+        return []
 
     main_array = []
     first_array = []
