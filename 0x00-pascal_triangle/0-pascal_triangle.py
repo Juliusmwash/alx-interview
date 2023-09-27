@@ -16,8 +16,7 @@ def pascal_triangle(n):
     sec_array = []
 
     for i in range(0, n):
-        array_len = len(first_array)
-        for j in range(0, array_len):
+        for j in range(0, len(first_array)):
             if j == 0:
                 sec_array.append(1)
             else:
