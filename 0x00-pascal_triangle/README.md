@@ -1,2 +1,2 @@
-Pascal Triangle
+Pascal Triangle Project
 
