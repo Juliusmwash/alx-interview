@@ -30,6 +30,9 @@ def canUnlockAll(boxes):
         Returns:
             None
         """
+        for box in boxes:
+            if type(box) is not list:
+                return False
         if box_index < n:
             if not boxes[box_index]:
                 visited[box_index] = True
