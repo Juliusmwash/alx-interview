@@ -8,7 +8,8 @@ def canUnlockAll(boxes):
     Determine if all locked boxes can be opened using their keys.
 
     Args:
-        boxes (list of list): A list of boxes, where each box contains keys to other boxes.
+        boxes (list of list): A list of boxes, where each box contains
+        keys to other boxes.
 
     Returns:
         bool: True if all boxes can be opened, False otherwise.
@@ -29,4 +30,3 @@ def canUnlockAll(boxes):
                 stack.append(key)
 
     return all(visited)
-
