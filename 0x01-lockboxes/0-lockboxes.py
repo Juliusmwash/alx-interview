@@ -3,6 +3,7 @@
 This module defines a function 'canUnlockAll'.
 """
 
+
 def canUnlockAll(boxes):
     """
     Determine if all locked boxes can be opened using their keys.
