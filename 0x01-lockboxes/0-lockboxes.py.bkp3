@@ -19,14 +19,32 @@ def canUnlockAll(boxes):
     n = len(boxes)
     visited = [False] * n
     visited[0] = True
-    stack = [0]  # Initialize a stack for iterative DFS
 
-    while stack:
-        box_index = stack.pop()
+    def dfs(box_index):
+        """
+        Recursive function to perform depth-first search (DFS) to unlock boxes.
+
+        Args:
+            box_index (int): Index of the current box.
+
+        Returns:
+            bool: True if all boxes can be opened, False otherwise.
+        """
+        if all(visited):
+            return True  # All boxes are open, return True
+        
         for key in boxes[box_index]:
             if key < n and not visited[key]:
                 visited[key] = True
-                stack.append(key)
+                if dfs(key):
+                    return True
 
-    return all(visited)
+        return False
+
+    # Iterate through each box and perform DFS
+    for i in range(n):
+        if dfs(i):
+            return True
+
+    return False
 
